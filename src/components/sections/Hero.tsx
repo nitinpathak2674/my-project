@@ -2,21 +2,31 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-10 py-20 max-w-7xl mx-auto gap-10">
-      <div className="flex-1">
-        <h1 className="text-6xl font-bold text-[#1A1A1A] mb-4">ज्ञान और आध्यात्म का संगम</h1>
-        <p className="text-gray-500 text-lg mb-8">Learn astrology, spirituality, and life wisdom from experts</p>
-        <button className="bg-[#FF5C00] text-white px-8 py-3 rounded-full font-bold shadow-lg">
-          Explore Courses →
-        </button>
-      </div>
-      <div className="flex-1 relative h-[450px] w-full rounded-[60px] overflow-hidden shadow-2xl border-[12px] border-white">
-        <Image 
-          src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" 
-          alt="Spiritual" 
-          fill 
-          className="object-cover"
-        />
+    <section className="relative min-h-[85vh] flex items-center px-6 md:px-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-6 leading-[1.1]">
+            ज्ञान और आध्यात्म <br /> 
+            <span className="text-[#FF5C00]">का संगम</span>
+          </h1>
+          <p className="text-gray-500 mb-10 text-lg md:text-xl max-w-lg leading-relaxed font-medium">
+            Master the ancient wisdom of Vedic Astrology, Numerology, and Vastu from world-renowned experts.
+          </p>
+          <a href="#courses" className="bg-[#FF5C00] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-orange-200 hover:bg-[#e65300] transition-all inline-block">
+            Explore Courses
+          </a>
+        </div>
+
+        <div className="relative h-[400px] md:h-[600px] w-full">
+          <Image 
+            src="/hero.jpg"  // ✅ Yahan humne naam change kar diya 'hero.jpg'
+            alt="Spiritual Learning" 
+            fill 
+            className="object-cover rounded-[60px] shadow-2xl z-10 border-8 border-white"
+            priority
+            unoptimized
+          />
+        </div>
       </div>
     </section>
   );
