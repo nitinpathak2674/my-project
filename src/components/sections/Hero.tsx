@@ -19,7 +19,7 @@ export default function Hero() {
 
         <div className="relative h-[400px] md:h-[600px] w-full">
           <Image 
-            src="/hero.jpg"  // ✅ Yahan humne naam change kar diya 'hero.jpg'
+            src="/hero.jpg"  
             alt="Spiritual Learning" 
             fill 
             className="object-cover rounded-[60px] shadow-2xl z-10 border-8 border-white"
