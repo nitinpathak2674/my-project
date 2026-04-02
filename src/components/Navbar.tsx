@@ -10,7 +10,7 @@ export default function Navbar() {
           <span className="text-lg md:text-xl font-bold text-[#1A1A1A] tracking-tight">PrabhuBhakti</span>
         </Link>
 
-        {/* Navigation Tabs - Ab mobile par bhi dikhenge (Choti screen par text size thoda kam kar diya hai) */}
+        
         <div className="flex gap-3 md:gap-8 text-[10px] md:text-sm font-bold text-gray-500 uppercase tracking-wider mx-2">
           <Link href="#courses" className="hover:text-[#FF5C00] transition">Courses</Link>
           <Link href="#ebooks" className="hover:text-[#FF5C00] transition whitespace-nowrap">Ebooks</Link>
