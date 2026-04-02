@@ -5,7 +5,7 @@ export default function Ebooks() {
     { 
       title: "Basics of Astrology", 
       price: "199", 
-      img: "/book1.jpg" // Ye ab public folder se uthayega
+      img: "/book1.jpg" 
     },
     { 
       title: "Vedic Remedies Guide", 
