@@ -7,23 +7,39 @@ import About from '@/components/sections/About';
 import Testimonials from '@/components/sections/Testimonials';
 import Footer from '@/components/Footer';
 
-async function getCoursesData() {
-  try {
-    const res = await fetch('http://localhost:3000/api/courses', { cache: 'no-store' });
-    if (!res.ok) return [];
-    return res.json();
-  } catch (e) { return []; }
-}
-
-export default async function Home() {
-  const coursesData = await getCoursesData();
+export default function Home() {
+  // Hardcoded data taaki Vercel par bina API ke bhi UI dikhe
+  const coursesData = [
+    { 
+      id: 1, 
+      title: "Mastering Vedic Astrology", 
+      price: "₹4,999",
+      instructor: "BY ACHARYA DEV",
+      duration: "3 Months"
+    },
+    { 
+      id: 2, 
+      title: "Advanced Numerology Expert", 
+      price: "₹3,499",
+      instructor: "BY GURU RAJ",
+      duration: "2 Months"
+    },
+    { 
+      id: 3, 
+      title: "Professional Vastu Consultant", 
+      price: "₹5,999",
+      instructor: "BY ACHARYA MEHTA",
+      duration: "4 Months"
+    }
+  ];
 
   return (
     <main className="min-h-screen bg-[#F8F9FA]">
       <Navbar />
       <Hero />
       <Ebooks />
-      <Courses data={coursesData} /> 
+      {/* Ab ye hamesha data dikhayega, loading ya empty nahi */}
+      <Courses data={coursesData} isLoading={false} isError={false} /> 
       <Webinars />
       <About />
       <Testimonials />
